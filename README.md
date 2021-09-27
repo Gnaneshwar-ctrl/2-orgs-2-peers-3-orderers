@@ -32,3 +32,14 @@ export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org2.e
 export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 
 export CORE_PEER_ADDRESS=localhost:9051
+
+
+
+
+
+# Adding more ordered nodes 
+
+1) In crypto-config under OrdererOrgs: Specs: create a new hostname for your orderer (using the same domain and name as your other).
+
+2) Run the command ./cryptogen extend --config=../test-network/organizations/cryptogen/crypto-config-orderer.yaml NOTE: the 'extend' part so it generates what you need and not regenerate everything.
+ 
